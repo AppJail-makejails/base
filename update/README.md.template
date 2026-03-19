@@ -9,9 +9,7 @@ wikipedia.org/wiki/FreeBSD
 ## How to use this Makejail
 
 ```sh
-appjail makejail \
-    -j freebsd \
-    -f gh+AppJail-makejails/base
+appjail makejail -j freebsd -f gh+AppJail-makejails/base -o container="args:--pull"
 ```
 
 ### Arguments
