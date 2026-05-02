@@ -18,7 +18,7 @@ RUN mkdir -p /etc/pkg && \
       '  fingerprints: "/usr/share/keys/pkgbase-${VERSION_MAJOR}",' \
       '  enabled: yes' \
       '}' \
-      'FreeBSD-Ports: {' \
+      'FreeBSD-ports: {' \
       '  url: "pkg+https://pkg.FreeBSD.org/${ABI}/latest",' \
       '  mirror_type: "srv",' \
       '  signature_type: "fingerprints",' \
