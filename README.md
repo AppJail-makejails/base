@@ -4,7 +4,7 @@ FreeBSD is a free and open-source Unix-like operating system descended from the 
 
 wikipedia.org/wiki/FreeBSD
 
-<img src="https://www.freebsd.org/images/banner-red.png"" width="30%" height="auto" alt="FreeBSD logo">
+<img src="https://www.freebsd.org/images/banner-red.png" width="30%" height="auto" alt="FreeBSD logo">
 
 ## How to use this Makejail
 
