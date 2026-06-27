@@ -15,6 +15,10 @@ appjail makejail \
     -o container="args:--pull"
 ```
 
+### Arguments (stage: build)
+
+* `base_from` (default: `ghcr.io/appjail-makejails/base`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
+* `base_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
 
 ## OCI Configuration
 
