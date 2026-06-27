@@ -4,28 +4,27 @@ FreeBSD is a free and open-source Unix-like operating system descended from the 
 
 wikipedia.org/wiki/FreeBSD
 
-<img src="https://www.freebsd.org/images/banner-red.png" alt="freebsd logo" width="80%" height="auto">
+<img src="https://www.freebsd.org/images/banner-red.png"" width="30%" height="auto" alt="FreeBSD logo">
 
 ## How to use this Makejail
 
 ```sh
-appjail makejail -j freebsd -f gh+AppJail-makejails/base -o container="args:--pull"
+appjail makejail \
+    -j freebsd \
+    -f gh+AppJail-makejails/base \
+    -o container="args:--pull"
 ```
 
-### Arguments
-
-* `base_from` (default: `ghcr.io/appjail-makejails/base`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
-* `base_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
 
 ## OCI Configuration
 
 ```yaml
 build:
   variants:
-    - tag: 15.0
-      containerfile: Containerfile.pkg
+    - tag: 15.1
+      containerfile: Containerfile
       aliases: ["latest"]
       default: true
       args:
-        FREEBSD_RELEASE: "15.0"
+        FREEBSD_RELEASE: "15.1"
 ```
