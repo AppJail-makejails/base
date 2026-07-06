@@ -20,6 +20,7 @@ appjail makejail \
 * `base_from` (default: `ghcr.io/appjail-makejails/base`): Location of OCI image. See also [OCI Configuration](#oci-configuration).
 * `base_tag` (default: `latest`): OCI image tag. See also [OCI Configuration](#oci-configuration).
 
+
 ## OCI Configuration
 
 ```yaml
@@ -31,4 +32,6 @@ build:
       default: true
       args:
         FREEBSD_RELEASE: "15.1"
+        NO_PKGCLEAN: "1"
+      cache_dirs: ["pkgcache0:/var/cache/pkg"]
 ```
