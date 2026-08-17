@@ -8,7 +8,12 @@ LABEL org.opencontainers.image.title="FreeBSD base" \
 
 ENV ASSUME_ALWAYS_YES=yes
 
-RUN mkdir -p /etc/pkg && \
+RUN set -xe; \
+    \
+    umask 0022; \
+    \
+    mkdir -p /etc/pkg; \
+    \
     printf '%s\n' \
       'FreeBSD-ports-kmods: { enabled: no }' \
       'FreeBSD-base: {' \
@@ -24,5 +29,6 @@ RUN mkdir -p /etc/pkg && \
       '  signature_type: "fingerprints",' \
       '  fingerprints: "/usr/share/keys/pkg",' \
       '  enabled: yes' \
-      '}' > /etc/pkg/FreeBSD.conf && \
+      '}' > /etc/pkg/FreeBSD.conf; \
+    \
     rm -rf /usr/local/etc/pkg
